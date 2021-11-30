@@ -1,0 +1,24 @@
+{
+  "name": "tc2026-final-back",
+  "version": "1.0.0",
+  "description": "Proyecto Final equipoDinamita",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivandumas/tc2026-final-back.git"
+  },
+  "keywords": [
+    "proyecto",
+    "pongame100",
+    "ayuda"
+  ],
+  "author": "IADM, JAVS, ASD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivandumas/tc2026-final-back/issues"
+  },
+  "homepage": "https://github.com/ivandumas/tc2026-final-back#readme"
+}
