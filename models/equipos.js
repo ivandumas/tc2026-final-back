@@ -15,8 +15,11 @@ const Equipo = (sequelize)=>{
         ubicacion:{
             type: Sequelize.STRING(300)
         },
+        marca:{
+            type: Sequelize.STRING(10)
+        },
         ultimo_campeoneato:{
-            type: Sequelize.INTEGER
+            type: Sequelize.STRING(5)
         },
         campeon_divisional:{
             type: Sequelize.BOOLEAN = false //Pendiente no sabemos como predefinirlos en false
