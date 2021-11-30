@@ -1,11 +1,11 @@
 function applyRelationship(sequelize) {
     //imprimir los modelos adheridos al objeto de con
     console.log(sequelize.models)
-    const Torneo = sequelize.models.torneo
+    const Division = sequelize.models.division
     const Equipo = sequelize.models.equipo
 
-    Torneo.hasMany(Equipo, {foreignKey: 'equipoId'});
-    Equipo.belongsTo(Torneo);
+    Division.hasMany(Equipo, {foreignKey: 'equipoId'});
+    Equipo.belongsTo(Division);
 }
 
 
