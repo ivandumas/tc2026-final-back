@@ -2,7 +2,7 @@ const Sequelize = require("sequelize")
 
 const Equipo = (sequelize)=>{
     sequelize.define('equipo',{
-        id:{
+        equipoID:{
             type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -18,17 +18,20 @@ const Equipo = (sequelize)=>{
         marca:{
             type: Sequelize.STRING(10)
         },
-        ultimo_campeoneato:{
+        ultimo_campeonato:{
             type: Sequelize.STRING(5)
         },
         campeon_divisional:{
-            type: Sequelize.BOOLEAN = false //Pendiente no sabemos como predefinirlos en false
+            type: Sequelize.BOOLEAN = false,
+            defaultValue: false
         },
         comodin:{
-            type: Sequelize.BOOLEAN = false //Pendiente no sabemos como predefinirlos en false
+            type: Sequelize.BOOLEAN = false,
+            defaultValue: false
         },
         primer_lugar:{
-            type: Sequelize.BOOLEAN = false //Pendiente no sabemos como predefinirlos en false
+            type: Sequelize.BOOLEAN,
+            defaultValue: false
         },
         division:{
             type: Sequelize.INTEGER
