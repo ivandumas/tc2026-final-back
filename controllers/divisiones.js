@@ -10,20 +10,15 @@ exports.postAgregarDivision = (req, res) => {
         },
     }).then((found) => {
         if (found === null) {
-            if (req.body.descripcion.value.length > 9 && req.body.descripcion.value.length < 251) {
             Division.create(req.body)
                 .then((result) => {
-                    console.log('Division agregado exitosamente')
+                    console.log('Division agregada exitosamente')
                     res.json({status: 200, estado: 'aceptado' })
                 })
                 .catch((err) => {
                     console.log(err)
                     res.json({ estado: 'error' })
                 })
-            } else {
-                console.log('Description must be between 10 and 250 characters')
-                res.json({status: 422, codigo: "InvalidBodyException"})
-            }
         } else {
             console.log('El registro de este Division ya existe')
             res.json({ estado: 'ya existe' })
@@ -31,7 +26,7 @@ exports.postAgregarDivision = (req, res) => {
     })
 }
 
-exports.getObtenerDivisioness = (req, res) => {
+exports.getObtenerDivisiones = (req, res) => {
     Division.findAll()
         .then((divisiones) => {
             console.log(divisiones)
@@ -47,7 +42,7 @@ exports.postBorrarDivision = (req, res) => {
     console.log(req.body)
     Division.destroy({
         where: {
-            id: req.body.id,
+            divisionID: req.body.divisionID,
         },
     })
         .then(() => {
@@ -64,11 +59,11 @@ exports.postActualizarDivision = (req, res) => {
     console.log(req.body)
     Division.update(
         {
-            nombre: req.body.nombre,
+            region: req.body.region,
         },
         {
             where: {
-                id: req.body.id,
+                divisionID: req.body.divisionID,
             },
         }
     )
