@@ -30,7 +30,7 @@ exports.getObtenerDivisiones = (req, res) => {
     Division.findAll()
         .then((divisiones) => {
             console.log(divisiones)
-            res.json({status: 200, divisiones})
+            res.json({status: 200, divisiones, equipos})
         })
         .catch((err) => {
             console.log(err)
