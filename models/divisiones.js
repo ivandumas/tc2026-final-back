@@ -2,7 +2,7 @@ const Sequelize = require("sequelize")
 
 const Divisiones = (sequelize)=>{
     sequelize.define('division',{
-            divisionID:{
+        id:{
             type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -13,6 +13,9 @@ const Divisiones = (sequelize)=>{
         },
         region:{
             type: Sequelize.STRING(15)
+        },
+        logo:{
+            type: Sequelize.STRING()
         }
     })
 }
