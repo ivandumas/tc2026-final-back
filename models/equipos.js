@@ -2,7 +2,7 @@ const Sequelize = require("sequelize")
 
 const Equipo = (sequelize)=>{
     sequelize.define('equipo',{
-        equipoID:{
+        id:{
             type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -33,8 +33,11 @@ const Equipo = (sequelize)=>{
             type: Sequelize.BOOLEAN,
             defaultValue: false
         },
-        division:{
+        divisionN:{
             type: Sequelize.INTEGER
+        },
+        logo:{
+            type: Sequelize.STRING()
         }
     })
 }
