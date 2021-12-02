@@ -4,7 +4,7 @@ function applyRelationship(sequelize) {
     const Division = sequelize.models.division
     const Equipo = sequelize.models.equipo
 
-    Division.hasMany(Equipo,{foreignKey: 'divisionN',as:"equipos"});
+    Division.hasMany(Equipo,{as:"equipos"});
     Equipo.belongsTo(Division);
 }
 
