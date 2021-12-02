@@ -1,6 +1,5 @@
 //Importando la biblioteca para realizar aplicaciones web
 const express = require("express")
-const path = require("path")
 const cors = require("cors")
 
 const dRoutes = require('./routes/divisiones')
