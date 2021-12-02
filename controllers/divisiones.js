@@ -5,8 +5,8 @@ exports.postAgregarDivision = (req, res) => {
     console.log(req.body)
     Division.findOne({
         where: {
-            nombre: req.body.nombre,
-            ubicacion: req.body.ubicacion,
+            liga: req.body.liga,
+            region: req.body.region,
         },
     }).then((found) => {
         if (found === null) {
