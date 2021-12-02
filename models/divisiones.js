@@ -2,7 +2,7 @@ const Sequelize = require("sequelize")
 
 const Divisiones = (sequelize)=>{
     sequelize.define('division',{
-        id:{
+            divisionID:{
             type: Sequelize.INTEGER,
             allowNull: false,
             primaryKey: true,
