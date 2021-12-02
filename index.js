@@ -1,6 +1,7 @@
 //Importando la biblioteca para realizar aplicaciones web
 const express = require("express")
 const path = require("path")
+const cors = require("cors")
 
 const dRoutes = require('./routes/divisiones')
 const eRoutes = require('./routes/equipos')
@@ -10,10 +11,8 @@ const sequelize = require('./utils/database')
 const app = express();
 
 //Middleware
-app.use(express.static(path.join(__dirname,'public')))
-//Configurar el servidor y que sepa que es un json
 app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+app.use(cors())
 
 
 app.use("/equipos",eRoutes);
