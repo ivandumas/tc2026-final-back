@@ -9,10 +9,10 @@ const Divisiones = (sequelize)=>{
             allowIncrement: true
         },
         liga:{
-            type: Sequelize.STRING(10)
+            type: Sequelize.STRING(15)
         },
         region:{
-            type: Sequelize.STRING(10)
+            type: Sequelize.STRING(15)
         }
     })
 }
