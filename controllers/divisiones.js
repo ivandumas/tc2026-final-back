@@ -42,7 +42,7 @@ exports.postBorrarDivision = (req, res) => {
     console.log(req.body)
     Division.destroy({
         where: {
-            divisionID: req.body.divisionID,
+            id: req.body.id,
         },
     })
         .then(() => {
@@ -63,7 +63,7 @@ exports.postActualizarDivision = (req, res) => {
         },
         {
             where: {
-                divisionID: req.body.divisionID,
+                id: req.body.id,
             },
         }
     )
