@@ -1,7 +1,7 @@
 const {applyRelationship} = require('./relations')
 const Sequelize=require('sequelize')
 //Generar conexion param1=nombreBD, param2=usuario param3=password
-const sequelize= new Sequelize('equipoDinamita','user1','root',{
+const sequelize= new Sequelize('MLBapp','user1','root',{
     dialect: 'mysql',
     host: '54.234.54.143',
     define: {
