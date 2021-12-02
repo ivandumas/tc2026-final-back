@@ -19,14 +19,14 @@ const Equipo = (sequelize)=>{
             type: Sequelize.STRING(10)
         },
         ultimo_campeonato:{
-            type: Sequelize.STRING(5)
+            type: Sequelize.INTEGER
         },
         campeon_divisional:{
-            type: Sequelize.BOOLEAN = false,
+            type: Sequelize.BOOLEAN,
             defaultValue: false
         },
         comodin:{
-            type: Sequelize.BOOLEAN = false,
+            type: Sequelize.BOOLEAN,
             defaultValue: false
         },
         primer_lugar:{
